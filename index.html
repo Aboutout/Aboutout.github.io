@@ -63,7 +63,17 @@
           width: 33.33%;
           padding: 5px;
         }
+       .myClass {
+            float:left;
+            width:100px;
+            height:100px;
+        }
 
+        .myCLass2 {
+            float:left;
+            width:400px;
+            height:300px;
+        }
         /* Clearfix (clear floats) */
         .row1::after {
           content: "";
@@ -435,43 +445,21 @@
                 </div>
                 <center><h3>Comming Soon........</h3></center>
 
-<!--                 <div class="row1">
-                    <div class="column1">
-                         <a data-toggle="collapse" href="#collapse1"  aria-expanded="false" aria-controls="collapse1"> 
-                            <img class="circular--square" src="images/woman.png" />            
-                        </a> 
-                        
-                    </div>
-                    <div class="column1">
-                         <a data-toggle="collapse" href="#collapse2"  aria-expanded="false" aria-controls="collapse2"> 
-                            <img class="circular--square" src="images/woman.png" />            
-                        </a>
-                    </div>
-                    <div class="column1">
-                        <a href=""> <img class="circular--square" src="images/woman.png" /></a>
-                    </div>
-                    <div class="column1">
-                        <a href=""> <img class="circular--square" src="images/woman.png" /></a>
-                    </div>
-                    <div class="column1">
-                        <a href=""> <img class="circular--square" src="images/woman.png" /></a>
-                    </div>
+                <div class="row1">
+                        <div class="column1">
+                             <img class="circular--square" src="images/woman.png" onclick="func1()"/>
+                        </div>
+                        <div class="column1">
+                            <a href=""> <img class="circular--square" src="images/woman.png" /></a>
+                        </div>
+                        <div class="column1">
+                            <a href=""> <img class="circular--square" src="images/woman.png" /></a>
+                        </div>
                     
-                </div>
-                 <div class="collapse multi-collapse" id="collapse1"> 
-                    <div class="card card-body"> 
-                        GeeksforGeeks is a computer science portal. It is the 
-                        best platform to lean programming.  
-                    </div> 
                 </div> 
-                 <div class="collapse multi-collapse" id="collapse2"> 
-                    <div class="card card-body"> 
-                        hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh  
-                    </div> 
-                </div> 
+                <p id="demo"></p>
 
-                
-                 -->
+
              </div>
             <!-- </div> -->
         </section>
@@ -641,7 +629,15 @@
         
         <!-- Back To Top -->
         <a href="#" class="back_top"> <i class="pe-7s-angle-up"> </i> </a>
-
+        <script>
+            function func1()
+            {
+                document.getElementById("demo").innerHTML = "<main> " +
+                                                " <img src='mages/woman.png' class='myClass'> " +
+                                                " <span class='myClass2'>Hello World</span> "+ 
+                                                "</main>";
+            }
+        </script>
         <!-- Javascript -->
         <script src="js/jquery.min.js"></script>
         <script src="js/popper.min.js"></script>
