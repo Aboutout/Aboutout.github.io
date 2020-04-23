@@ -88,12 +88,14 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
         
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">  
-    </script>  
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">  
-    </script>  
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">  
-    </script>  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>  
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>       
+        
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://jqueryui.com/resources/demos/style.css">
         
     </head>
     <body>
@@ -443,22 +445,22 @@
                         </div>
                     </div>
                 </div>
-                <center><h3>Comming Soon........</h3></center>
-
                 <div class="row1">
                         <div class="column1">
-                             <img class="circular--square" src="images/woman.png" onclick="func1()"/>
+                             <img class="circular--square" src="images/woman.png" id="open"/>
                         </div>
-                        <div class="column1">
+<!--                         <div class="column1">
                             <a href=""> <img class="circular--square" src="images/woman.png" /></a>
                         </div>
                         <div class="column1">
                             <a href=""> <img class="circular--square" src="images/woman.png" /></a>
-                        </div>
-                    
+                        </div> -->                    
                 </div> 
-                <p id="demo"></p>
-
+                <!-- data for dialog-->
+                <div id="dialog" title="Basic dialog">
+                    <p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+                    <img src='images/woman.png'> 
+                </div>
 
              </div>
             <!-- </div> -->
@@ -629,15 +631,32 @@
         
         <!-- Back To Top -->
         <a href="#" class="back_top"> <i class="pe-7s-angle-up"> </i> </a>
+            
+        <!-- Dialog Box -->
         <script>
-            function func1()
-            {
-                document.getElementById("demo").innerHTML = "<main> " +
-                                                " <img src='images/woman.png' class='myClass'> " +
-                                                " <span class='myClass2'>Hello World</span> "+ 
-                                                "</main>";
-            }
+        $(document).ready(function() {
+          $(function() {
+            console.log('false');
+            $( "#dialog" ).dialog({
+                autoOpen: false,
+                title: 'Test',
+            width: 600,
+            height: 600,
+            fixedDimensions: true,
+            dynamic: false,
+            modal: true,
+            allowScrolling: true
+            });
+          });
+
+          $("button").click(function(){
+            console.log("click");
+                /** $(this).hide();  **/
+                $( "#dialog" ).dialog('open');
+            });
+        }); 
         </script>
+            
         <!-- Javascript -->
         <script src="js/jquery.min.js"></script>
         <script src="js/popper.min.js"></script>
