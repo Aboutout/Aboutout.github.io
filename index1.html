@@ -114,7 +114,7 @@ $(document).ready(function() {
   $("img").click(function(){
     console.log("click");
         /** $(this).hide();  **/
-        $( "#dialog" ).dialog('open');
+        $( "#dialog" ).dialog();
     });
 }); 
 </script>
@@ -471,7 +471,7 @@ $(document).ready(function() {
                         <div class="column1">
                              <img class="circular--square" src="images/woman.png" id="open"/>
                             <!-- data for dialog-->
-                            <div id="dialog" title="Basic dialog">
+                            <div id="dialog" title="Basic dialog" style="display:none;">
                                 <p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
                                 <img src='images/woman.png'> 
                             </div>
