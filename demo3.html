@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>jQuery UI Dialog - Default functionality</title>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<link rel="stylesheet" href="https://jqueryui.com/resources/demos/style.css">
+<script>
+$(document).ready(function() {
+  $(function() {
+    console.log('false');
+    $( "#dialog" ).dialog({
+        autoOpen: false,
+        title: 'Test',
+	width: 600,
+	height: 600,
+	fixedDimensions: true,
+	dynamic: false,
+	modal: true,
+   	allowScrolling: true
+    });
+  });
+
+  $("button").click(function(){
+    console.log("click");
+        /** $(this).hide();  **/
+        $( "#dialog" ).dialog('open');
+    });
+  $("#open").click(function(){
+    console.log("click");
+        /** $(this).hide();  **/
+        $( "#dialog" ).dialog('open');
+    });
+}); 
+</script>
+</head>
+<body>
+<a href="#"><img id="open" src='img/Image1.jpg'> </a>
+<button id="open">Open Dialog box</button> 
+<div id="dialog" title="Basic dialog" style="display:none;">
+<p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+<img src='img/Image1.jpg'> 
+</div>
+</body>
+</html>
