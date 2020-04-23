@@ -97,6 +97,30 @@
     <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <link rel="stylesheet" href="https://jqueryui.com/resources/demos/style.css">
         
+    <!-- Dialog Box -->
+    <script>
+    $(document).ready(function() {
+      $(function() {
+        console.log('false');
+        $( "#dialog" ).dialog({
+            autoOpen: false,
+            title: 'Test',
+        width: 600,
+        height: 600,
+        fixedDimensions: true,
+        dynamic: false,
+        modal: true,
+        allowScrolling: true
+        });
+      });
+
+      $("button").click(function(){
+        console.log("click");
+            /** $(this).hide();  **/
+            $( "#dialog" ).dialog('open');
+        });
+    }); 
+    </script>
     </head>
     <body>
 
@@ -631,32 +655,6 @@
         
         <!-- Back To Top -->
         <a href="#" class="back_top"> <i class="pe-7s-angle-up"> </i> </a>
-            
-        <!-- Dialog Box -->
-        <script>
-        $(document).ready(function() {
-          $(function() {
-            console.log('false');
-            $( "#dialog" ).dialog({
-                autoOpen: false,
-                title: 'Test',
-            width: 600,
-            height: 600,
-            fixedDimensions: true,
-            dynamic: false,
-            modal: true,
-            allowScrolling: true
-            });
-          });
-
-          $("button").click(function(){
-            console.log("click");
-                /** $(this).hide();  **/
-                $( "#dialog" ).dialog('open');
-            });
-        }); 
-        </script>
-            
         <!-- Javascript -->
         <script src="js/jquery.min.js"></script>
         <script src="js/popper.min.js"></script>
