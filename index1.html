@@ -81,37 +81,6 @@
           display: table;
         }
         </style>
-<!-- <link rel="stylesheet" href="css/jquery-ui.css">
-<script src="js/jquery-1.10.2.js"></script>
-<script src="js/jquery-ui.js"></script> -->
-	    
-<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
-<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css" />
-	    
-	<script>
-		$(document).ready(function() {
-		$(function() {
-		console.log('false');
-		$("#dialog").dialog({
-		autoOpen: false,
-		title: 'Test',
-		width: 600,
-		height: 600,
-		fixedDimensions: true,
-		dynamic: false,
-		modal: true,
-		allowScrolling: true
-		});
-		});
-
-		$("img").click(function(){
-		console.log("click");
-		/** $(this).hide();  **/
-		$("#dialog").dialog('open');
-		});
-		}); 
-	</script>
         
     </head>
     <body>
@@ -463,12 +432,7 @@
                 </div>
                 <div class="row1">
                         <div class="column1">
-                             <img class="circular--square" src="images/woman.png" id="open"/>
-                            <!-- data for dialog-->
-                            <div id="dialog" title="Basic dialog" style="display:none;">
-                                <p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
-                                <img src='images/woman.png'> 
-                            </div>
+                             <img class="circular--square" src="images/woman.png"/>
                         </div>
 <!--                         <div class="column1">
                             <a href=""> <img class="circular--square" src="images/woman.png" /></a>
